@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clothing Store</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Topbar -->
+    <div class="topbar w3-hide-large">
+      <span class="logo">LOGO</span>
+      <button class="menu-btn" onclick="openSidebar()">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- OVERLAY -->
+    <div id="overlay" onclick="closeSidebar()"></div>
+
+    <!-- SIDEBAR -->
+    <nav id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <h3>LOGO</h3>
+        <button class="close-btn w3-hide-large" onclick="closeSidebar()">
+          <i class="fa fa-remove"></i>
+        </button>
+      </div>
+
+      <a href="#">Shirts</a>
+      <a href="#">Dresses</a>
+
+      <div class="accordion">
+        Jeans ▾
+        <div class="panel">
+          <a href="#">Skinny</a>
+          <a href="#">Relaxed</a>
+          <a href="#">Bootcut</a>
+          <a href="#">Straight</a>
+        </div>
+      </div>
+
+      <a href="#">Jackets</a>
+      <a href="#">Gymwear</a>
+      <a href="#">Blazers</a>
+      <a href="#">Shoes</a>
+
+      <div class="sidebar-bottom">
+        <a href="#">Contact</a>
+        <a href="#">Newsletter</a>
+        <a href="#">Subscribe</a>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="main">
+      <!-- HEADER -->
+      <div class="page-header">
+        <h2>Jeans</h2>
+        <div>
+          <i class="fa fa-shopping-cart"></i>
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <img src="img/MainPhoto.jpg" />
+        <div class="hero-text">
+          <h1>New arrivals</h1>
+          <p>COLLECTION 2016</p>
+          <button>SHOP NOW</button>
+        </div>
+      </div>
+
+      <p class="items-count">8 items</p>
+
+      <!-- PRODUCTS -->
+      <section class="products">
+        <div class="product">
+          <img src="img/photo1.jpg" />
+          <p>Ripped Skinny Jeans<br /><b>$24.99</b></p>
+        </div>
+
+        <div class="product">
+          <img src="img/photo2.jpg" />
+          <span class="tag">New</span>
+          <p>Mega Ripped Jeans<br /><b>$19.99</b></p>
+        </div>
+
+        <div class="product">
+          <img src="img/photo3.jpg" />
+          <p>Washed Skinny Jeans<br /><b>$20.50</b></p>
+        </div>
+
+        <div class="product">
+          <img src="img/photo4.jpg" />
+          <p>Vintage Skinny Jeans<br /><b class="sale">$14.99</b></p>
+        </div>
+      </section>
+
+      <!-- SUBSCRIBE -->
+      <section class="subscribe">
+        <h1>Subscribe</h1>
+        <p>To get special offers and VIP treatment:</p>
+        <input type="email" placeholder="Enter e-mail" />
+        <button>Subscribe</button>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-grid">
+          <div>
+            <h4>Contact</h4>
+            <p>Questions? Go ahead.</p>
+            <input placeholder="Name" />
+            <input placeholder="Email" />
+            <input placeholder="Subject" />
+            <input placeholder="Message" />
+            <button>Send</button>
+          </div>
+
+          <div>
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">We're hiring</a>
+            <a href="#">Support</a>
+            <a href="#">Find store</a>
+            <a href="#">Shipment</a>
+            <a href="#">Payment</a>
+            <a href="#">Gift card</a>
+            <a href="#">Return</a>
+            <a href="#">Help</a>
+          </div>
+
+          <div>
+            <h4>Store</h4>
+            <p><i class="fa fa-map-marker"></i> Company Name</p>
+            <p><i class="fa fa-phone"></i> 0044123123</p>
+            <p><i class="fa fa-envelope"></i> ex@mail.com</p>
+
+            <h4>We accept</h4>
+            <p><i class="fa fa-cc-amex"></i> Amex</p>
+            <p><i class="fa fa-credit-card"></i> Credit Card</p>
+
+            <div class="socials">
+              <i class="fa fa-facebook-official"></i>
+              <i class="fa fa-instagram"></i>
+              <i class="fa fa-snapchat"></i>
+              <i class="fa fa-pinterest"></i>
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-linkedin"></i>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="footer-bottom">Powered by <a href="#">w3.css</a></div>
+    </div>
+
+    <script>
+      function openSidebar() {
+        document.getElementById("sidebar").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      function closeSidebar() {
+        document.getElementById("sidebar").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
