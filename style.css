@@ -7,7 +7,7 @@ body {
   margin: 0;
 }
 
-/* TOP BAR */
+
 .topbar {
   background: black;
   color: white;
@@ -28,7 +28,6 @@ body {
   font-size: 22px;
 }
 
-/* OVERLAY */
 #overlay {
   display: none;
   position: fixed;
@@ -37,7 +36,6 @@ body {
   z-index: 900;
 }
 
-/* SIDEBAR */
 .sidebar {
   width: 250px;
   height: 100vh;
@@ -73,7 +71,7 @@ body {
   margin-top: 40px;
 }
 
-/* MAIN */
+
 .main {
   margin-left: 250px;
   padding: 20px;
@@ -86,7 +84,7 @@ body {
   align-items: center;
 }
 
-/* HERO */
+
 .hero {
   position: relative;
 }
@@ -113,7 +111,7 @@ body {
   border: none;
 }
 
-/* PRODUCTS */
+
 .items-count {
   color: gray;
   margin: 15px 0;
@@ -140,7 +138,7 @@ body {
   color: #c62828;
 }
 
-/* SUBSCRIBE */
+
 .subscribe {
   background: black;
   color: white;
@@ -161,7 +159,7 @@ body {
   border: none;
 }
 
-/* FOOTER */
+
 .footer {
   background: #f1f1f1;
   padding: 30px;
@@ -193,7 +191,7 @@ body {
   margin: 4px 0;
 }
 
-/* FOOTER BOTTOM */
+
 .footer-bottom {
   background: black;
   color: white;
@@ -201,7 +199,7 @@ body {
   padding: 10px;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 992px) {
   .sidebar {
     display: none;
@@ -226,3 +224,4 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
