@@ -1,189 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Clothing Store</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html>
+<head>
+    <title>Clothing Store Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<nav class="sidebar" id="mySidebar">
+    <div class="sidebar-header">
+        <i onclick="closeSidebar()" class="fa fa-remove close-btn"></i>
+        <h3 class="logo"><b>LOGO</b></h3>
+    </div>
+    <div class="sidebar-links">
+        <a href="#" class="sidebar-item">Shirts</a>
+        <a href="#" class="sidebar-item">Dresses</a>
+        
+        <a onclick="toggleAccordion()" href="javascript:void(0)" class="sidebar-item accordion-btn" id="myBtn">
+            Jeans <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demoAcc" class="accordion-content">
+            <a href="#" class="sidebar-item sub-item"><i class="fa fa-caret-right"></i> Skinny</a>
+            <a href="#" class="sidebar-item sub-item">Relaxed</a>
+            <a href="#" class="sidebar-item sub-item">Bootcut</a>
+            <a href="#" class="sidebar-item sub-item">Straight</a>
+        </div>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+        <a href="#" class="sidebar-item">Jackets</a>
+        <a href="#" class="sidebar-item">Gymwear</a>
+        <a href="#" class="sidebar-item">Blazers</a>
+        <a href="#" class="sidebar-item">Shoes</a>
+    </div>
+    <div class="sidebar-footer">
+        <a href="#footer">Contact</a>
+        <a href="javascript:void(0)" onclick="openModal()">Newsletter</a>
+        <a href="#footer">Subscribe</a>
+    </div>
+</nav>
 
-  <body>
-    <!-- Topbar -->
-    <div class="topbar w3-hide-large">
-      <span class="logo">LOGO</span>
-      <button class="menu-btn" onclick="openSidebar()">
+<header class="mobile-header">
+    <div class="logo">LOGO</div>
+    <a href="javascript:void(0)" class="menu-icon" onclick="openSidebar()">
         <i class="fa fa-bars"></i>
-      </button>
+    </a>
+</header>
+
+<div class="overlay" onclick="closeSidebar()" id="myOverlay"></div>
+
+<div class="main-content">
+
+    <header class="page-header">
+        <p class="left-text">Jeans</p>
+        <p class="right-icons">
+            <i class="fa fa-shopping-cart"></i>
+            <i class="fa fa-search"></i>
+        </p>
+    </header>
+
+    <div class="hero-container">
+        <img src="/img/MainPhoto.jpg" alt="Jeans">
+        <div class="hero-text">
+            <h1 class="hero-title">New arrivals</h1>
+            <h1 class="hero-collection">COLLECTION 2016</h1>
+            <p><a href="#jeans" class="btn-black">SHOP NOW</a></p>
+        </div>
     </div>
 
-    <!-- OVERLAY -->
-    <div id="overlay" onclick="closeSidebar()"></div>
+    <div class="items-count" id="jeans">
+        <p>8 items</p>
+    </div>
 
-    <!-- SIDEBAR -->
-    <nav id="sidebar" class="sidebar">
-      <div class="sidebar-header">
-        <h3>LOGO</h3>
-        <button class="close-btn w3-hide-large" onclick="closeSidebar()">
-          <i class="fa fa-remove"></i>
-        </button>
-      </div>
-
-      <a href="#">Shirts</a>
-      <a href="#">Dresses</a>
-
-      <div class="accordion">
-        Jeans ▾
-        <div class="panel">
-          <a href="#">Skinny</a>
-          <a href="#">Relaxed</a>
-          <a href="#">Bootcut</a>
-          <a href="#">Straight</a>
-        </div>
-      </div>
-
-      <a href="#">Jackets</a>
-      <a href="#">Gymwear</a>
-      <a href="#">Blazers</a>
-      <a href="#">Shoes</a>
-
-      <div class="sidebar-bottom">
-        <a href="#">Contact</a>
-        <a href="#">Newsletter</a>
-        <a href="#">Subscribe</a>
-      </div>
-    </nav>
-
-    <!-- MAIN -->
-    <div class="main">
-      <!-- HEADER -->
-      <div class="page-header">
-        <h2>Jeans</h2>
-        <div>
-          <i class="fa fa-shopping-cart"></i>
-          <i class="fa fa-search"></i>
-        </div>
-      </div>
-
-      <!-- HERO -->
-      <div class="hero">
-        <img src="img/MainPhoto.jpg" />
-        <div class="hero-text">
-          <h1>New arrivals</h1>
-          <p>COLLECTION 2016</p>
-          <button>SHOP NOW</button>
-        </div>
-      </div>
-
-      <p class="items-count">8 items</p>
-
-      <!-- PRODUCTS -->
-      <section class="products">
-        <div class="product">
-          <img src="img/photo1.jpg" />
-          <p>Ripped Skinny Jeans<br /><b>$24.99</b></p>
+    <div class="product-grid">
+        
+        <div class="product-card">
+            <div class="img-container">
+                <img src="/img/rippedSkinyJeans.jpg" alt="Ripped Skinny Jeans">
+            </div>
+            <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
         </div>
 
-        <div class="product">
-          <img src="img/photo2.jpg" />
-          <span class="tag">New</span>
-          <p>Mega Ripped Jeans<br /><b>$19.99</b></p>
+        <div class="product-card">
+            <div class="img-container">
+                <img src="/img/MegaRippedJeans.jpg" alt="Mega Ripped Jeans">
+                <span class="tag">New</span>
+                <div class="img-overlay">
+                    <button class="btn-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <p>Mega Ripped Jeans<br><b>$19.99</b></p>
         </div>
 
-        <div class="product">
-          <img src="img/photo3.jpg" />
-          <p>Washed Skinny Jeans<br /><b>$20.50</b></p>
+        <div class="product-card">
+            <div class="img-container">
+                <img src="/img/WashedSkinnyJeans.jpg" alt="Washed Skinny Jeans">
+            </div>
+            <p>Washed Skinny Jeans<br><b>$20.50</b></p>
         </div>
 
-        <div class="product">
-          <img src="img/photo4.jpg" />
-          <p>Vintage Skinny Jeans<br /><b class="sale">$14.99</b></p>
+        <div class="product-card">
+            <div class="img-container">
+                <img src="/img/VintageSkinnyJeans.jpg" alt="Vintage Skinny Jeans">
+                <span class="tag">Sale</span>
+                <div class="img-overlay">
+                    <button class="btn-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <p>Vintage Skinny Jeans<br><b class="text-red">$14.99</b></p>
         </div>
-      </section>
+        
+        <div class="product-card">
+            <div class="img-container">
+                <img src="/img/MegaRippedJeans.jpg" alt="Mega Ripped Jeans">
+            </div>
+            <p>Mega Ripped Jeans<br><b>$14.99</b></p>
+        </div>
+         
+        <div class="product-card">
+            <div class="img-container">
+                <img src="/img/WashedSkinnyJeans.jpg" alt="Washed Skinny Jeans">
+            </div>
+            <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+        </div>
 
-      <!-- SUBSCRIBE -->
-      <section class="subscribe">
+        <div class="product-card">
+            <div class="img-container">
+                <img src="/img/VintageSkinnyJeans.jpg" alt="Vintage Skinny Jeans">
+                <span class="tag">Sale</span>
+                <div class="img-overlay">
+                    <button class="btn-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <p>Vintage Skinny Jeans<br><b class="text-red">$14.99</b></p>
+        </div>
+
+        <div class="product-card">
+            <div class="img-container">
+                <img src="/img/rippedSkinyJeans.jpg" alt="Ripped Skinny Jeans">
+            </div>
+            <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+        </div>
+
+    </div>
+
+    <div class="subscribe-section">
         <h1>Subscribe</h1>
         <p>To get special offers and VIP treatment:</p>
-        <input type="email" placeholder="Enter e-mail" />
-        <button>Subscribe</button>
-      </section>
-
-      <!-- FOOTER -->
-      <footer class="footer">
+        <form>
+            <input class="input-field" type="text" placeholder="Enter e-mail">
+            <button type="button" class="btn-red">Subscribe</button>
+        </form>
+    </div>
+    
+    <footer class="site-footer" id="footer">
         <div class="footer-grid">
-          <div>
-            <h4>Contact</h4>
-            <p>Questions? Go ahead.</p>
-            <input placeholder="Name" />
-            <input placeholder="Email" />
-            <input placeholder="Subject" />
-            <input placeholder="Message" />
-            <button>Send</button>
-          </div>
-
-          <div>
-            <h4>About</h4>
-            <a href="#">About us</a>
-            <a href="#">We're hiring</a>
-            <a href="#">Support</a>
-            <a href="#">Find store</a>
-            <a href="#">Shipment</a>
-            <a href="#">Payment</a>
-            <a href="#">Gift card</a>
-            <a href="#">Return</a>
-            <a href="#">Help</a>
-          </div>
-
-          <div>
-            <h4>Store</h4>
-            <p><i class="fa fa-map-marker"></i> Company Name</p>
-            <p><i class="fa fa-phone"></i> 0044123123</p>
-            <p><i class="fa fa-envelope"></i> ex@mail.com</p>
-
-            <h4>We accept</h4>
-            <p><i class="fa fa-cc-amex"></i> Amex</p>
-            <p><i class="fa fa-credit-card"></i> Credit Card</p>
-
-            <div class="socials">
-              <i class="fa fa-facebook-official"></i>
-              <i class="fa fa-instagram"></i>
-              <i class="fa fa-snapchat"></i>
-              <i class="fa fa-pinterest"></i>
-              <i class="fa fa-twitter"></i>
-              <i class="fa fa-linkedin"></i>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Questions? Go ahead.</p>
+                <form action="/action_page.php" target="_blank">
+                    <input class="input-field" type="text" placeholder="Name" name="Name" required>
+                    <input class="input-field" type="text" placeholder="Email" name="Email" required>
+                    <input class="input-field" type="text" placeholder="Subject" name="Subject" required>
+                    <input class="input-field" type="text" placeholder="Message" name="Message" required>
+                    <button type="submit" class="btn-block">Send</button>
+                </form>
             </div>
-          </div>
-        </div>
-      </footer>
 
-      <div class="footer-bottom">Powered by <a href="#">w3.css</a></div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">We're hiring</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Find store</a></li>
+                    <li><a href="#">Shipment</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Gift card</a></li>
+                    <li><a href="#">Return</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Store</h4>
+                <p><i class="fa fa-fw fa-map-marker"></i> Company Name</p>
+                <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
+                <p><i class="fa fa-fw fa-envelope"></i> ex@mail.com</p>
+                <h4>We accept</h4>
+                <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+                <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+                <div class="social-icons">
+                    <i class="fa fa-facebook-official"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-snapchat"></i>
+                    <i class="fa fa-pinterest-p"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="Custom CSS" target="_blank"> W3 CSS</a>
     </div>
 
-    <script>
-      function openSidebar() {
-        document.getElementById("sidebar").style.display = "block";
-        document.getElementById("overlay").style.display = "block";
-      }
+</div>
 
-      function closeSidebar() {
-        document.getElementById("sidebar").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-      }
-    </script>
-  </body>
+<div id="newsletter" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <i onclick="closeModal()" class="fa fa-remove close-modal-btn"></i>
+        </div>
+        <div class="modal-body">
+            <h2 class="wide-text">NEWSLETTER</h2>
+            <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+            <input class="input-field" type="text" placeholder="Enter e-mail">
+            <button type="button" class="btn-red" onclick="closeModal()">Subscribe</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Accordion Logic
+    function toggleAccordion() {
+        var x = document.getElementById("demoAcc");
+        x.classList.toggle("show");
+    }
+
+    // Open Sidebar
+    function openSidebar() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+    
+    // Close Sidebar
+    function closeSidebar() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Modal Logic
+    function openModal() {
+        document.getElementById("newsletter").style.display = "block";
+    }
+    function closeModal() {
+        document.getElementById("newsletter").style.display = "none";
+    }
+    
+    // Auto-open accordion on load (demo purpose)
+    document.getElementById("myBtn").click();
+</script>
+
+</body>
 </html>
